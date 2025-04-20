@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hobby landing page</title>
+        <style>
+            body {
+                background: tan;
+            }
+            h1{
+                text-align: center;
+            }
+            h2{
+                text-align: center;
+            }
+            p{
+                text-align: center;
+            }
+            img{
+                max-width: 100%;
+                
+                
+            }
+            button{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                border: 1px solid white;
+            }
+            footer{
+                text-align: center;
+                margin: 10px;
+                font-size: 20px;
+            }
+            .container{
+                max-width: 600px;
+                margin: 20px auto;
+                background-color: beige;
+                padding: 20px;
+                border-radius: 10px;
+            }
+            .theme-button{
+                font-size: 10px;
+                background: black;
+                color: white;
+                padding: 5 8px;
+            }
+            .theme-button:hover{
+                background: white;
+                color: black;
+            }
+            .baked-cookies{
+                border-radius: 10px;
+                transition: all 150ms ease-in-out;
+
+            }
+            .baked-cookies:hover {
+ filter: contrast(80%);
+ transform: scale(1.1);
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .grid img{
+            border-radius: 10px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .dark{
+            background: black;
+            color: white;
+        }
+        .dark .container{
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .dark a {
+            color: rgb(255, 187, 0);
+        }
+        </style>
+    </head>
+    <body >
+        <button class="theme-button">Dark theme</button>    
+            <div class="container">
+<h1>My hobbies</h1>
+        <h2>Baking cookies</h2>
+        <img src="https://cdn.loveandlemons.com/wp-content/uploads/2024/08/chocolate-chip-cookie-recipe.jpg" alt="" class="baked-cookies"/>
+        <div class="grid">
+        <img src="https://www.carnation.co.uk/sites/default/files/2024-01/100.png" alt=""/>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBAFSuxFiqBs_XLoSYgKTZhZuhfrhPEmuUfw&s" alt=""/>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYSxtrqBoOBOE6bFyk6JCc-yd1wUw2PFPjjQ&s" alt=""/>
+        </div>
+        <p>🍪
+            <br />A cookie (American English) or biscuit (British English) is a baked snack or dessert that is typically small, flat, and sweet. It usually contains flour, sugar, egg, and some type of oil, fat, or butter. It may include other ingredients such as raisins, oats, chocolate chips, or nuts.
+
+Cookie texture varies from crisp and crunchy to soft and chewy, depending on the exact combination of ingredients and methods used to create them.
+        </p><a href="https://sallysbakingaddiction.com/chewy-chocolate-chip-cookies/">
+        <button>Get recipes</button>
+        </a>
+    </div>   
+     <footer>Code with ❤️ by <a href="https://github.com/Bea-manu" target="_blank">Beatrice Shipurwa</a></footer>
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body");
+            
+            if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+        }
+
+        let themeButton = document.querySelector(".theme-button");
+        themeButton.addEventListener("click", changeTheme);
+    </script>
+    </body>
+</html>
